@@ -1,5 +1,11 @@
 {
+  "functions": {
+    "api/generate.py": {
+      "runtime": "python3.12"
+    }
+  },
   "rewrites": [
-    { "source": "/gen", "destination": "/api/generate" }
+    { "source": "/gen", "destination": "/api/generate" },
+    { "source": "/api/generate", "destination": "/api/generate" }
   ]
 }
