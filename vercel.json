@@ -1,5 +1,18 @@
 {
-  "rewrites": [
-    { "source": "/gen", "destination": "/api/generate" }
+  "builds": [
+    {
+      "src": "api/generate.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/gen(.*)",
+      "dest": "/api/generate"
+    },
+    {
+      "src": "/api/generate(.*)",
+      "dest": "/api/generate"
+    }
   ]
 }
